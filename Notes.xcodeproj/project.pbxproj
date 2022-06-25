@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C46016ED2866DC3800DF20DA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46016EC2866DC3800DF20DA /* DetailView.swift */; };
+		C46016EF2866DFF200DF20DA /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46016EE2866DFF200DF20DA /* CreditsView.swift */; };
+		C46016F22866E41300DF20DA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46016F12866E41300DF20DA /* HeaderView.swift */; };
+		C46016F42866EB5D00DF20DA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46016F32866EB5D00DF20DA /* SettingsView.swift */; };
 		C4A934112865D1E9003AF126 /* Notes WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C4A934102865D1E9003AF126 /* Notes WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C4A934162865D1ED003AF126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A934152865D1ED003AF126 /* Assets.xcassets */; };
 		C4A9341C2865D1ED003AF126 /* Notes WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C4A9341B2865D1ED003AF126 /* Notes WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -63,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		C46016EC2866DC3800DF20DA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C46016EE2866DFF200DF20DA /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		C46016F12866E41300DF20DA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		C46016F32866EB5D00DF20DA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C4A9340C2865D1E9003AF126 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A934102865D1E9003AF126 /* Notes WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notes WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A934152865D1ED003AF126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C46016F02866E3E900DF20DA /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C46016F12866E41300DF20DA /* HeaderView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		C4A934052865D1E9003AF126 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +131,7 @@
 		C4A9341F2865D1ED003AF126 /* Notes WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C46016F02866E3E900DF20DA /* Component */,
 				C4A9343A2865D78F003AF126 /* Model */,
 				C4A934392865D789003AF126 /* View */,
 				C4A934222865D1ED003AF126 /* NotesApp.swift */,
@@ -141,6 +156,8 @@
 			children = (
 				C4A934202865D1ED003AF126 /* ContentView.swift */,
 				C46016EC2866DC3800DF20DA /* DetailView.swift */,
+				C46016EE2866DFF200DF20DA /* CreditsView.swift */,
+				C46016F32866EB5D00DF20DA /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,10 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4A934212865D1ED003AF126 /* ContentView.swift in Sources */,
+				C46016F42866EB5D00DF20DA /* SettingsView.swift in Sources */,
 				C4A934232865D1ED003AF126 /* NotesApp.swift in Sources */,
 				C4A934252865D1ED003AF126 /* ComplicationController.swift in Sources */,
+				C46016EF2866DFF200DF20DA /* CreditsView.swift in Sources */,
 				C46016ED2866DC3800DF20DA /* DetailView.swift in Sources */,
 				C4A9343C2865D79D003AF126 /* Note.swift in Sources */,
+				C46016F22866E41300DF20DA /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +558,7 @@
 				DEVELOPMENT_TEAM = 5XZHHC4623;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hakkicansengonul.Notes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Notes;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -551,7 +571,7 @@
 				DEVELOPMENT_TEAM = 5XZHHC4623;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hakkicansengonul.Notes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Notes;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
