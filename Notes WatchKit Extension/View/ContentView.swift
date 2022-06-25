@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-     // MARK: - PROPERTIES
+    // MARK: - PROPERTIES
     
     @State private var notes : [Note] = [Note]()
     @State private var text : String = ""
-     // MARK: - FUNCTION
+    // MARK: - FUNCTION
     func getDocumentDirectory() -> URL {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return path[0]
@@ -48,15 +48,15 @@ struct ContentView: View {
             save()
         }
     }
-     // MARK: - BODY
+    // MARK: - BODY
     var body: some View {
-       
+        
         VStack{
             
             HStack(alignment: .center, spacing: 6) {
-               TextField("Add New Note",text: $text)
+                TextField("Add New Note",text: $text)
                 Button {
-                   //1. only run the button's action when the text field is not emty
+                    //1. only run the button's action when the text field is not emty
                     guard text.isEmpty == false else {
                         return
                     }
@@ -77,19 +77,21 @@ struct ContentView: View {
                 .buttonStyle(.plain)
                 .foregroundColor(.accentColor)
                 
-
+                
             }
             Spacer()
             if notes.count >= 1 {
                 List{
                     ForEach (0..<notes.count,id: \.self){i in
-                        HStack{
-                            Capsule()
-                                .frame(width:4)
-                                .foregroundColor(.accentColor)
-                            Text(notes[i].text)
-                                .lineLimit(1)
-                                .padding(.leading,5)
+                        NavigationLink(destination : DetailView(note: notes[i], count: notes.count, index: i)) {
+                            HStack{
+                                Capsule()
+                                    .frame(width:4)
+                                    .foregroundColor(.accentColor)
+                                Text(notes[i].text)
+                                    .lineLimit(1)
+                                    .padding(.leading,5)
+                            }
                         }
                         
                     }
@@ -110,14 +112,14 @@ struct ContentView: View {
         .onAppear {
             load()
         }
-    
+        
         
         
     }
 }
 
 
- // MARK: - PREVIEW
+// MARK: - PREVIEW
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
